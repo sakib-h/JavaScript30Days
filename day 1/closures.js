@@ -47,5 +47,29 @@ expect(5).toBe(5)
 expect(5).notToBe(6)
 
 // 2665. Counter II  - Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
+class Counter {
+    constructor(init){
+        this.init = init
+        this.value = init
+    }
 
-
+    increment(){
+        this.value +=1
+        return this.value
+    };
+    decrement(){
+        this.value -=1
+        return this.value
+    }
+    reset(){
+        this.value = this.init
+        return this.value
+    }
+}
+function createCounter2 (init){
+    return new Counter(init)
+}
+const counter2 = createCounter2(5)
+counter2.increment()
+counter2.decrement()
+counter2.reset()
