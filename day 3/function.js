@@ -19,9 +19,6 @@ function argumentsLength(...arg){
 console.log(argumentsLength(1, 2, 3, 4, 5)) // 5
 
 // 2666. Allow One Function Call
-// Given a function fn, return a new function that is identical to the original function except that it ensures fn is called at most once.
-// The first time the returned function is called, it should return the same result as fn.
-// Every subsequent time it is called, it should return undefined.
 function once(fn){
     let count =0
     return function(...arg){
@@ -34,3 +31,11 @@ function once(fn){
     }
 }
 console.log(once(Math.max)(1, 2, 3)) // 3
+
+//  2623. Memoize
+function memorize(){
+    let cache ={}
+    return function(...arg){
+        
+    }
+}
