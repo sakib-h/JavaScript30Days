@@ -36,6 +36,13 @@ console.log(once(Math.max)(1, 2, 3)) // 3
 function memorize(){
     let cache ={}
     return function(...arg){
-        
+        let key = JSON.stringify(arg)
+        if(cache[key]){
+            return cache[key]
+        } else {
+            let result = fn(...arg)
+            cache[key] = result
+            return result
+        }
     }
 }
